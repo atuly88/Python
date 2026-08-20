@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini ATM System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="atm-container">
+
+        <!-- ATM Header -->
+        <div class="atm-header">
+            <h1>🏧 ATM SYSTEM</h1>
+            <p>Welcome to Mini ATM</p>
+        </div>
+
+        <!-- PIN Section -->
+        <div id="login-section">
+
+            <h2>Enter Your PIN</h2>
+
+            <input
+                type="password"
+                id="pin"
+                placeholder="Enter 4-digit PIN"
+                maxlength="4"
+            >
+
+            <button onclick="login()">LOGIN</button>
+
+            <p id="login-message"></p>
+
+        </div>
+
+
+        <!-- ATM Menu -->
+        <div id="atm-section" class="hidden">
+
+            <h2>ATM MENU</h2>
+
+            <div class="menu">
+
+                <button onclick="checkBalance()">
+                    💰 Check Balance
+                </button>
+
+                <button onclick="showWithdraw()">
+                    💸 Withdraw Money
+                </button>
+
+                <button onclick="showDeposit()">
+                    💵 Deposit Money
+                </button>
+
+                <button onclick="accountDetails()">
+                    👤 Account Details
+                </button>
+
+                <button class="exit-btn" onclick="logout()">
+                    🚪 Exit
+                </button>
+
+            </div>
+
+            <!-- Result -->
+            <div id="result"></div>
+
+            <!-- Withdraw -->
+            <div id="withdraw-section" class="operation hidden">
+
+                <h3>Withdraw Money</h3>
+
+                <input
+                    type="number"
+                    id="withdraw-amount"
+                    placeholder="Enter amount"
+                >
+
+                <button onclick="withdrawMoney()">
+                    Withdraw
+                </button>
+
+            </div>
+
+
+            <!-- Deposit -->
+            <div id="deposit-section" class="operation hidden">
+
+                <h3>Deposit Money</h3>
+
+                <input
+                    type="number"
+                    id="deposit-amount"
+                    placeholder="Enter amount"
+                >
+
+                <button onclick="depositMoney()">
+                    Deposit
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
